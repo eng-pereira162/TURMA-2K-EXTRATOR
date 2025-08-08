@@ -1,13 +1,13 @@
-const botaoMostraPalavras = document.querySelector("#botao-palavrachave");
+const botaoExtrair = document.querySelector("#botao-palavrachave");
 
-botaoMostraPalavras.addEventListener("click", mostraPalavrasChave);
+botaoExtrair.addEventListener("click", Pedra);
 
-function mostraPalavrasChave() {
+function Pedra() {
   const texto = document.querySelector("#entrada-de-texto").value;
 
   const campoResultado = document.querySelector("#resultado-palavrachave");
 
   const palavras = texto.split(" ");
 
-  campoResultado.textContent = palavras;
+  campoResultado.textContent = palavras.join(" - ");
 }
